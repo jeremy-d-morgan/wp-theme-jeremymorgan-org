@@ -893,3 +893,147 @@ object {
 .gallery-caption {
 	display: block;
 }
+
+/*------------------------------------------------------------------------------
+## Customize
+------------------------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+## Navigation and Branding
+--------------------------------------------------------------*/
+
+.site-branding {
+	position: fixed;
+	z-index: 1000;
+	top: 16px;
+	margin: 0;
+	width: 100%;
+	text-align: center;
+}
+
+.site-branding h1.site-title {
+	display: inline-block;
+	font-size: 16px;
+	line-height: 16px;
+	margin: 0;
+}
+
+.site-branding h1.site-title a {
+	text-decoration: none;
+	color: #ffffff;
+}
+
+.site-branding h1.site-title a:hover {
+	color: #ffff55;
+}
+
+.site-branding .eight-bit-frame {
+	display: inline-block;
+	/*width: 272px;
+	margin: 0 auto;*/
+}
+
+/*--------------------------------------------------------------
+## Hero Section
+--------------------------------------------------------------*/
+
+section.hero {
+	min-height: 800px;
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+}
+
+/*--------------------------------------------------------------
+## Homepage
+--------------------------------------------------------------*/
+
+#homepage-hero {
+
+	background: #000000;
+
+}
+
+/*--------------------------------------------------------------
+## 8-Bit Frames
+--------------------------------------------------------------*/
+
+.eight-bit-frame {
+	display: table;
+	background: transparent;
+}
+
+.eight-bit-frame-row {
+	display: table-row;
+}
+
+.eight-bit-frame-border,
+.eight-bit-frame-content {
+	display: table-cell;
+}
+
+.eight-bit-frame-border-top-left,
+.eight-bit-frame-border-top-right,
+.eight-bit-frame-border-bottom-left,
+.eight-bit-frame-border-bottom-right {
+	height: 32px;
+	width: 32px;
+	background-size: 32px 32px;
+	background-repeat: no-repeat;
+}
+
+.eight-bit-frame-border-top,
+.eight-bit-frame-border-bottom {
+	height: 32px;
+	width: auto;
+	background-size: 32px 32px;
+	background-repeat: repeat-x;
+}
+
+.eight-bit-frame-border-left,
+.eight-bit-frame-border-right {
+	height: auto;
+	width: 32px;
+	background-size: 32px 32px;
+	background-repeat: repeat-y;
+}
+
+.eight-bit-frame-border-top {
+	background-image: url( 'img/8-bit-frame-top.png' );
+}
+
+.eight-bit-frame-border-bottom {
+	background-image: url( 'img/8-bit-frame-bottom.png' );
+}
+
+.eight-bit-frame-border-left {
+	background-image: url( 'img/8-bit-frame-left.png' );
+}
+
+.eight-bit-frame-border-right {
+	background-image: url( 'img/8-bit-frame-right.png' );
+}
+
+.eight-bit-frame-border-top-left {
+	background-image: url( 'img/8-bit-frame-top-left.png' );
+}
+
+.eight-bit-frame-border-top-right {
+	background-image: url( 'img/8-bit-frame-top-right.png' );
+}
+
+.eight-bit-frame-border-bottom-left {
+	background-image: url( 'img/8-bit-frame-bottom-left.png' );
+}
+
+.eight-bit-frame-border-bottom-right {
+	background-image: url( 'img/8-bit-frame-bottom-right.png' );
+}
+
+.eight-bit-frame-content {
+	font-family: 'Press Start 2P';
+	font-size: 16px;
+	line-height: 16px;
+	color: #ffffff;
+	background-color: #000000;
+}

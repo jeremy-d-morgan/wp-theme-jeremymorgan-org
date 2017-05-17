@@ -25,6 +25,27 @@
 
 	<header id="masthead" class="site-header" role="banner">
 		<div class="site-branding">
+
+			<div class="eight-bit-frame">
+				<div class="eight-bit-frame-row eight-bit-frame-row-top">
+					<div class="eight-bit-frame-border eight-bit-frame-border-top-left">&nbsp;</div>
+					<div class="eight-bit-frame-border eight-bit-frame-border-top">&nbsp;</div>
+					<div class="eight-bit-frame-border eight-bit-frame-border-top-right">&nbsp;</div>
+				</div>
+				<div class="eight-bit-frame-row eight-bit-frame-row-middle">
+					<div class="eight-bit-frame-border eight-bit-frame-border-left">&nbsp;</div>
+					<div class="eight-bit-frame-content">
+						<div class=""><h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1></div>
+					</div>
+					<div class="eight-bit-frame-border eight-bit-frame-border-right">&nbsp;</div>
+				</div>
+				<div class="eight-bit-frame-row eight-bit-frame-row-bottom">
+					<div class="eight-bit-frame-border eight-bit-frame-border-bottom-left">&nbsp;</div>
+					<div class="eight-bit-frame-border eight-bit-frame-border-bottom">&nbsp;</div>
+					<div class="eight-bit-frame-border eight-bit-frame-border-bottom-right">&nbsp;</div>
+				</div>
+			</div>
+
 			<?php
 			if ( is_front_page() && is_home() ) : ?>
 				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
