@@ -7,6 +7,8 @@
  * @package wp-theme-jeremymorgan.org
  */
 
+require get_template_directory() . '/lib/jm-functions.php';
+
 if ( ! function_exists( 'wp_theme_jeremymorgan_org_setup' ) ) :
 /**
  * Sets up theme defaults and registers support for various WordPress features.
@@ -109,13 +111,16 @@ function wp_theme_jeremymorgan_org_scripts() {
 	wp_enqueue_style( 'google-fonts', 'https://fonts.googleapis.com/css?family=Press+Start+2P' );
 	wp_enqueue_style( 'wp-theme-jeremymorgan-org-style', get_stylesheet_uri() );
 
+	wp_deregister_script( 'jquery' );
+	wp_enqueue_script( 'jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js', array(), null, true);
+
 	wp_enqueue_script( 'wp-theme-jeremymorgan-org-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 	wp_enqueue_script( 'wp-theme-jeremymorgan-org-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
-	
+
 }
 add_action( 'wp_enqueue_scripts', 'wp_theme_jeremymorgan_org_scripts' );
 

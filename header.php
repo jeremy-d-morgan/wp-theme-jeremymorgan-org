@@ -9,6 +9,10 @@
  * @package wp-theme-jeremymorgan.org
  */
 
+$template_uri = get_template_directory_uri();
+
+$description = get_bloginfo( 'description', 'display' );
+
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
@@ -28,25 +32,45 @@
 
 			<div class="eight-bit-frame">
 				<div class="eight-bit-frame-row eight-bit-frame-row-top">
-					<div class="eight-bit-frame-border eight-bit-frame-border-top-left">&nbsp;</div>
-					<div class="eight-bit-frame-border eight-bit-frame-border-top">&nbsp;</div>
-					<div class="eight-bit-frame-border eight-bit-frame-border-top-right">&nbsp;</div>
+					<div class="eight-bit-frame-border eight-bit-frame-border-top-left"></div>
+					<div class="eight-bit-frame-border eight-bit-frame-border-top"></div>
+					<div class="eight-bit-frame-border eight-bit-frame-border-top-right"></div>
 				</div>
 				<div class="eight-bit-frame-row eight-bit-frame-row-middle">
-					<div class="eight-bit-frame-border eight-bit-frame-border-left">&nbsp;</div>
+					<div class="eight-bit-frame-border eight-bit-frame-border-left"></div>
 					<div class="eight-bit-frame-content">
-						<div class=""><h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1></div>
+						<nav id="site-navigation" class="main-navigation" role="navigation">
+
+							<div class="greeting">
+								<div class="avatar">
+									<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img src="<?php echo $template_uri; ?>/img/avatar.png" height="64" width="64" alt="8-bit styled avatar of a bearded man with glasses." /></a>
+								</div>
+								<div class="text">
+									<span class="line-1">Greetings!</span>
+									<span class="line-2">My name is <h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>.</span></h1>
+									<span class="line-3">I'm a programmer.</span>
+								</div>
+								<div class="menu">
+									<button class="menu-toggle hamburger" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'wp-theme-jeremymorgan-org' ); ?></button>
+									<?php wp_nav_menu( array( 'theme_location' => 'menu-1', 'menu_id' => 'primary-menu' ) ); ?>
+								</div>
+							</div>
+
+							<div class="clear"></div>
+
+						</nav><!-- #site-navigation -->
 					</div>
-					<div class="eight-bit-frame-border eight-bit-frame-border-right">&nbsp;</div>
+					<div class="eight-bit-frame-border eight-bit-frame-border-right"></div>
 				</div>
 				<div class="eight-bit-frame-row eight-bit-frame-row-bottom">
-					<div class="eight-bit-frame-border eight-bit-frame-border-bottom-left">&nbsp;</div>
-					<div class="eight-bit-frame-border eight-bit-frame-border-bottom">&nbsp;</div>
-					<div class="eight-bit-frame-border eight-bit-frame-border-bottom-right">&nbsp;</div>
+					<div class="eight-bit-frame-border eight-bit-frame-border-bottom-left"></div>
+					<div class="eight-bit-frame-border eight-bit-frame-border-bottom"></div>
+					<div class="eight-bit-frame-border eight-bit-frame-border-bottom-right"></div>
 				</div>
 			</div>
 
 			<?php
+			/*
 			if ( is_front_page() && is_home() ) : ?>
 				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 			<?php else : ?>
@@ -56,15 +80,14 @@
 
 			$description = get_bloginfo( 'description', 'display' );
 			if ( $description || is_customize_preview() ) : ?>
-				<p class="site-description"><?php echo $description; /* WPCS: xss ok. */ ?></p>
+				<p class="site-description"><?php echo $description; ?></p>
 			<?php
-			endif; ?>
+				endif;
+			*/
+			?>
+
 		</div><!-- .site-branding -->
 
-		<nav id="site-navigation" class="main-navigation" role="navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'wp-theme-jeremymorgan-org' ); ?></button>
-			<?php wp_nav_menu( array( 'theme_location' => 'menu-1', 'menu_id' => 'primary-menu' ) ); ?>
-		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content">

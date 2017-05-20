@@ -103,4 +103,28 @@
 			}
 		}
 	}( container ) );
+
+
+	/**
+	 * Avatar Code
+ 	 */
+	if ( $( '#site-navigation .avatar a img' ).length ) {
+
+		$( '#site-navigation .avatar a' ).hover( function() {
+
+			var src = $( '#site-navigation .avatar a img' ).attr( 'src' );
+
+	    $( '#site-navigation .avatar a img' ).attr( 'src', src.replace( '.png', '-active.png' ) );
+
+	  }, function() {
+
+			var src = $( '#site-navigation .avatar a img' ).attr( 'src' );
+
+	    $( '#site-navigation .avatar a img' ).attr( 'src', src.replace( '-active.png', '.png' ) );
+
+	  });
+
+	}
+
+
 } )();
