@@ -9,9 +9,35 @@
  * @package wp-theme-jeremymorgan.org
  */
 
+
 $template_uri = get_template_directory_uri();
 
 $description = get_bloginfo( 'description', 'display' );
+
+$branding = '
+	<div class="greeting">
+		<div class="avatar">
+			<a href="' . esc_url( home_url( '/' ) ) . '" rel="home"><img src="' . $template_uri . '/img/avatar.png" height="64" width="64" alt="8-bit styled avatar of a bearded man with glasses." /></a>
+		</div>
+		<div class="text">
+			<span class="line line-1">My name is </span>
+			<span class="line line-2"><h1 class="site-title"><a href="' . esc_url( home_url( '/' ) ) . '" rel="home">' . get_bloginfo( 'name' ) . '</a>.</span></h1>
+			<span class="line line-3">I\'m a programmer.</span>
+		</div>
+	</div>
+';
+
+$primary_menu = '
+	<div class="menu">
+		<button class="menu-toggle hamburger" aria-controls="primary-menu" aria-expanded="false">' . esc_html__( 'Primary Menu', 'wp-theme-jeremymorgan-org' ) . '</button>
+		' . wp_nav_menu( array( 'theme_location' => 'menu-1', 'menu_id' => 'primary-menu', 'echo' => false ) ) . '
+	</div>
+';
+
+$branding_html = jm_eight_bit_frame( $branding, 'jm-branding', false );
+
+$primary_menu_html = jm_eight_bit_frame( $primary_menu, 'jm-primary-menu', false );
+
 
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?>>
@@ -30,44 +56,17 @@ $description = get_bloginfo( 'description', 'display' );
 	<header id="masthead" class="site-header" role="banner">
 		<div class="site-branding">
 
-			<div class="eight-bit-frame">
-				<div class="eight-bit-frame-row eight-bit-frame-row-top">
-					<div class="eight-bit-frame-border eight-bit-frame-border-top-left"></div>
-					<div class="eight-bit-frame-border eight-bit-frame-border-top"></div>
-					<div class="eight-bit-frame-border eight-bit-frame-border-top-right"></div>
-				</div>
-				<div class="eight-bit-frame-row eight-bit-frame-row-middle">
-					<div class="eight-bit-frame-border eight-bit-frame-border-left"></div>
-					<div class="eight-bit-frame-content">
-						<nav id="site-navigation" class="main-navigation" role="navigation">
+			<nav id="site-navigation" class="main-navigation" role="navigation">
 
-							<div class="greeting">
-								<div class="avatar">
-									<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img src="<?php echo $template_uri; ?>/img/avatar.png" height="64" width="64" alt="8-bit styled avatar of a bearded man with glasses." /></a>
-								</div>
-								<div class="text">
-									<span class="line-1">Greetings!</span>
-									<span class="line-2">My name is <h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>.</span></h1>
-									<span class="line-3">I'm a programmer.</span>
-								</div>
-								<div class="menu">
-									<button class="menu-toggle hamburger" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'wp-theme-jeremymorgan-org' ); ?></button>
-									<?php wp_nav_menu( array( 'theme_location' => 'menu-1', 'menu_id' => 'primary-menu' ) ); ?>
-								</div>
-							</div>
-
-							<div class="clear"></div>
-
-						</nav><!-- #site-navigation -->
-					</div>
-					<div class="eight-bit-frame-border eight-bit-frame-border-right"></div>
+				<div id="jm-branding">
+					<?php echo $branding_html; ?>
 				</div>
-				<div class="eight-bit-frame-row eight-bit-frame-row-bottom">
-					<div class="eight-bit-frame-border eight-bit-frame-border-bottom-left"></div>
-					<div class="eight-bit-frame-border eight-bit-frame-border-bottom"></div>
-					<div class="eight-bit-frame-border eight-bit-frame-border-bottom-right"></div>
+
+				<div id="jm-primary-menu">
+					<?php echo $primary_menu_html; ?>
 				</div>
-			</div>
+
+			</nav><!-- #site-navigation -->
 
 			<?php
 			/*

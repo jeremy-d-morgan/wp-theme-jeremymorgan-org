@@ -11,7 +11,9 @@
 
 <section id="homepage-hero" class="hero">
 
-Hero
+  <div class="content">
+    Hero
+  </div>
 
 </section>
 

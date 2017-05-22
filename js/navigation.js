@@ -104,27 +104,33 @@
 		}
 	}( container ) );
 
+} )();
 
-	/**
-	 * Avatar Code
- 	 */
+
+/**
+ * Avatar Code
+ */
+function jm_avatar () {
+
 	if ( $( '#site-navigation .avatar a img' ).length ) {
 
 		$( '#site-navigation .avatar a' ).hover( function() {
 
 			var src = $( '#site-navigation .avatar a img' ).attr( 'src' );
 
-	    $( '#site-navigation .avatar a img' ).attr( 'src', src.replace( '.png', '-active.png' ) );
+			$( '#site-navigation .avatar a img' ).attr( 'src', src.replace( '.png', '-active.png' ) );
 
-	  }, function() {
+		}, function() {
 
 			var src = $( '#site-navigation .avatar a img' ).attr( 'src' );
 
-	    $( '#site-navigation .avatar a img' ).attr( 'src', src.replace( '-active.png', '.png' ) );
+			$( '#site-navigation .avatar a img' ).attr( 'src', src.replace( '-active.png', '.png' ) );
 
-	  });
+		});
 
 	}
 
-
+}
+( function() {
+	jm_avatar();
 } )();
