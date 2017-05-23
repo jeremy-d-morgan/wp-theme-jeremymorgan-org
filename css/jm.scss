@@ -5,10 +5,10 @@
 $font-normal: 'VT323', monospace;
 $font-special: 'Press Start 2P', monospace;
 
-$link-color: #3CBCFC;
-$link-color-hover: #FFFF55;
+$color-link: #3CBCFC;
+$color-link-hover: #FFFF55;
 
-$color-darkgrey: #7C7C7C;
+$color-grey-dark: #7C7C7C;
 
 /*------------------------------------------------------------------------------
 ## Primary Styles
@@ -27,19 +27,19 @@ h1, h2, h3, h4 {
 }
 
 h2 {
-	font-size: 24px;
-	line-height: 48px;
+	font-size: 16px;
+	line-height: 32px;
 	text-align: center;
 	margin: 0;
 }
 
 a {
-	color: $link-color;
+	color: $color-link;
 	text-decoration: none;
 }
 
 a:hover {
-	color: $link-color-hover;
+	color: $color-link-hover;
 	text-decoration: underline;
 }
 
@@ -149,7 +149,7 @@ a:hover {
 	display: inline-block;
   position: relative;
 	*/
-	font-family: 'Press Start 2P';
+	font-family: $font-special;
 	font-size: 12px;
 	line-height: 24px;
 	background-color: #000000;
@@ -160,7 +160,7 @@ a:hover {
 --------------------------------------------------------------*/
 
 .site-branding {
-	position: fixed;
+	position: absolute;
 	z-index: 1000;
 	top: 0;
 	padding: 16px 0;
@@ -267,17 +267,17 @@ a:hover {
 .site-branding a {
 	text-decoration: none;
 	/*color: #ffffff;*/
-	color: $link-color;
+	color: $color-link;
 	/*transition: color 0.125s ease-in-out;*/
 }
 
 .site-branding a:hover {
-	/*border-bottom: 2px solid $link-color-hover;*/
+	/*border-bottom: 2px solid $color-link-hover;*/
 	text-decoration: none;
 	background-image: url( '../img/underline-yellow.png' );
 	background-repeat: repeat-x;
 	background-position: 0 28px;
-	color: $link-color-hover;
+	color: $color-link-hover;
 }
 
 /*
@@ -491,7 +491,7 @@ section.hero .content {
 
 #homepage-hero .menu {
 	/*
-	font-family: 'Press Start 2P';
+	font-family: $font-special;
 	font-size: 16px;
 	line-height: 32px;
 	*/
@@ -507,7 +507,7 @@ section.hero .content {
 #homepage-hero .menu a {
 	display: inline-block;
 	white-space: nowrap;
-	color: $link-color;
+	color: $color-link;
 }
 
 #homepage-hero .menu a:hover {
@@ -515,7 +515,7 @@ section.hero .content {
 	background-image: url( '../img/underline-yellow.png' );
 	background-repeat: repeat-x;
 	background-position: 0 24px;
-	color: $link-color-hover;
+	color: $color-link-hover;
 }
 
 #homepage-hero p {
@@ -528,5 +528,5 @@ section.hero .content {
 
 #homepage-posts {
 	padding: 16px;
-	background: $color-darkgrey;
+	background: $color-grey-dark;
 }
