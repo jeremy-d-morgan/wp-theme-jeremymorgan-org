@@ -13,16 +13,19 @@
 
   <div class="content">
     <p>&gt; echo readme.txt</p>
-    <p>Welcome to the personal website of Jeremy Morgan, a full-stack web developer and electronics tinkerer from Syracuse, NY.</p>
-    <p>This website serves as the primary location for documenting and archiving Jeremy's many adventures in programming, electronics, classic video games, and all the other things that distracts him.</p>
-    <p>Connect with Jeremy via:</p>
-    <ul class="menu">
-      <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* <a href="https://twitter.com/jdmorgancny">Twitter</a></li>
-      <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* <a href="https://www.linkedin.com/in/jdmorgancny/">LinkedIn</a></li>
-      <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* <a href="https://github.com/jeremy-d-morgan/">GitHub</a></li>
-    </ul>
-    <p class="scroll-more">Scroll to see recent posts...</p>
-    <p>&gt;<span class="cursor">_</span></p>
+    <div class="typed-string">
+      <p>Welcome to the personal website of Jeremy Morgan, a full-stack web developer and electronics tinkerer from Syracuse, NY.</p>
+      <p>This website serves as the primary location for documenting and archiving Jeremy's many adventures in programming, electronics, classic video games, and all the other things that distracts him.</p>
+      <p>Connect with Jeremy via:</p>
+      <ul class="menu">
+        <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* <a href="https://twitter.com/jdmorgancny">Twitter</a></li>
+        <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* <a href="https://www.linkedin.com/in/jdmorgancny/">LinkedIn</a></li>
+        <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* <a href="https://github.com/jeremy-d-morgan/">GitHub</a></li>
+      </ul>
+      <p class="scroll-more">Hint: Scroll down to see recent posts.</p>
+    </div>
+    <div class="typed"></div>
+    <p class="prompt">&gt;<span class="cursor">_</span></p>
   </div>
 
 </section>

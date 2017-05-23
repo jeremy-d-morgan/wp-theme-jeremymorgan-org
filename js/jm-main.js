@@ -58,9 +58,33 @@ function jm_cursor () {
 }//jm_cursor()
 
 
+/**
+ * Homepage Typed Animation
+ */
+function jm_homepage_typed () {
+
+	if ( $( 'section.hero .content .typed' ).length ) {
+
+		var string = $( 'section.hero .content .typed-string' ).html();
+
+	  $( 'section.hero .content .typed' ).typed( {
+			strings: [ string ],
+			typeSpeed: -1000,
+	    showCursor: false,
+	    onStringTyped: function() {
+				$( '#homepage-hero .prompt' ).show();
+	    }
+		} );
+
+	}
+
+}//jm_homepage_typed()
+
+
 ( function() {
 
 	jm_avatar();
   jm_cursor();
+	jm_homepage_typed();
 
 } )();

@@ -522,6 +522,15 @@ section.hero .content {
 	margin: 0 0 16px 0;
 }
 
+#homepage-hero .typed-string {
+	height: 0;
+	overflow: hidden;
+}
+
+#homepage-hero .prompt {
+	display: none;
+}
+
 #homepage-hero .cursor.off {
 	color: #000000;
 }
