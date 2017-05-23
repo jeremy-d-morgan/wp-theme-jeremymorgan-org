@@ -63,6 +63,12 @@ a:hover {
 	clear: both;
 }
 
+.hide {
+	height: 0;
+	max-height: 0;
+	overflow: hidden;
+}
+
 /*--------------------------------------------------------------
 ## 8-Bit Frames
 --------------------------------------------------------------*/
@@ -520,11 +526,6 @@ section.hero .content {
 
 #homepage-hero p {
 	margin: 0 0 16px 0;
-}
-
-#homepage-hero .typed-string {
-	height: 0;
-	overflow: hidden;
 }
 
 #homepage-hero .prompt {

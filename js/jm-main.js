@@ -63,16 +63,31 @@ function jm_cursor () {
  */
 function jm_homepage_typed () {
 
-	if ( $( 'section.hero .content .typed' ).length ) {
+	if ( $( '#homepage-hero' ).length ) {
 
-		var string = $( 'section.hero .content .typed-string' ).html();
+		var command = $( '#homepage-hero .command-string' ).html(),
+		    readme  = $( '#homepage-hero .readme-string' ).html();
 
-	  $( 'section.hero .content .typed' ).typed( {
-			strings: [ string ],
-			typeSpeed: -1000,
-	    showCursor: false,
+		$( '#homepage-hero .command-typed' ).typed( {
+			strings: [ command ],
+			typeSpeed: 100,
+	    showCursor: true,
+			cursorChar: '_',
 	    onStringTyped: function() {
-				$( '#homepage-hero .prompt' ).show();
+
+				$( '#homepage-hero .typed-cursor' ).hide();
+
+				$( '#homepage-hero .readme-typed' ).typed( {
+					strings: [ readme ],
+					typeSpeed: -1000,
+			    showCursor: false,
+			    onStringTyped: function() {
+
+						$( '#homepage-hero .prompt' ).show();
+
+			    }
+				} );
+
 	    }
 		} );
 

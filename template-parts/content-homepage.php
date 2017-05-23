@@ -12,8 +12,9 @@
 <section id="homepage-hero" class="hero">
 
   <div class="content">
-    <p>&gt; echo readme.txt</p>
-    <div class="typed-string">
+    <p>&gt; <span class="command-typed"></span></p>
+    <div class="hide command-string">echo readme.txt</div>
+    <div class="hide readme-string">
       <p>Welcome to the personal website of Jeremy Morgan, a full-stack web developer and electronics tinkerer from Syracuse, NY.</p>
       <p>This website serves as the primary location for documenting and archiving Jeremy's many adventures in programming, electronics, classic video games, and all the other things that distracts him.</p>
       <p>Connect with Jeremy via:</p>
@@ -24,7 +25,7 @@
       </ul>
       <p class="scroll-more">Hint: Scroll down to see recent posts.</p>
     </div>
-    <div class="typed"></div>
+    <div class="readme-typed"></div>
     <p class="prompt">&gt;<span class="cursor">_</span></p>
   </div>
 
